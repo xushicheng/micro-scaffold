@@ -1,0 +1,169 @@
+{
+    // 文件结尾
+    "files.eol": "\n",
+
+    // 4个空格缩进
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+
+    // 搜索
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/*.log": true,
+        "**/*.log*": true,
+        "**/bower_components": true,
+        "**/dist": true,
+        "**/elehukouben": true,
+        "**/.git": true,
+        "**/.gitignore": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "**/.idea": true,
+        "**/.vscode": false,
+        "**/yarn.lock": true,
+        "**/tmp": true,
+        "out": true,
+        "dist": true,
+        "node_modules": true,
+        "CHANGELOG.md": true,
+        "examples": true,
+        "res": true,
+        "screenshots": true,
+        "yarn-error.log": true,
+        "**/.yarn": true
+    },
+    "files.exclude": {
+        "**/.cache": true,
+        "**/.editorconfig": true,
+        "**/.eslintcache": true,
+        "**/bower_components": true,
+        "**/.idea": true,
+        "**/tmp": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.history": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.vscode/**": true,
+        "**/node_modules/**": true,
+        "**/tmp/**": true,
+        "**/bower_components/**": true,
+        "**/dist/**": true,
+        "**/yarn.lock": true
+    },
+
+    // 控制相关文件嵌套展示
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "$(capture).test.ts, $(capture).test.tsx",
+        "*.tsx": "$(capture).test.ts, $(capture).test.tsx",
+        "*.env": "$(capture).env.*",
+        "CHANGELOG.md": "CHANGELOG*",
+        "package.json": "pnpm-lock.yaml,pnpm-workspace.yaml,LICENSE,.gitattributes,.gitignore,.gitpod.yml,CNAME,README*,.npmrc,.browserslistrc",
+        ".eslintrc.cjs": ".eslintignore,.prettierignore,.stylelintignore,.commitlintrc.*,.prettierrc.*,.stylelintrc.*"
+    },
+
+    // 终端回滚
+    "terminal.integrated.scrollback": 10000,
+
+    // 插件设置
+    "color-highlight.matchRgbWithNoFunction": true,
+
+    // Enable the ESlint flat config support
+    "eslint.experimental.useFlatConfig": true,
+
+    // Disable the default formatter, use eslint instead
+    "prettier.enable": false,
+    "editor.formatOnSave": false,
+
+    // Auto fix
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.fixAll.stylelint": "explicit",
+        "source.organizeImports": "never",
+        // "source.fixAll": "explicit"
+    },
+
+    // Silent the stylistic rules in you IDE, but still auto fix them
+    "eslint.rules.customizations": [
+        { "rule": "style/*", "severity": "off" },
+        { "rule": "*-indent", "severity": "off" },
+        { "rule": "*-spacing", "severity": "off" },
+        { "rule": "*-spaces", "severity": "off" },
+        { "rule": "*-order", "severity": "off" },
+        { "rule": "*-dangle", "severity": "off" },
+        { "rule": "*-newline", "severity": "off" },
+        { "rule": "*quotes", "severity": "off" },
+        { "rule": "*semi", "severity": "off" }
+    ],
+
+    // Enable eslint for all supported languages
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "html",
+        "markdown",
+        "json",
+        "jsonc",
+        "yaml",
+        "toml"
+    ],
+
+    "pair-diff.patterns": [
+        {
+            "source": "./fixtures/output/**/*.*",
+            "target": "./fixtures/input/<base>"
+        }
+    ],
+
+
+    "stylelint.enable": true,
+    "stylelint.validate": [
+        "css",
+        "less",
+        "postcss",
+        "scss",
+        "vue",
+        "sass"
+    ],
+    "[css][less][scss]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": "explicit",
+        },
+    },
+
+    // volar 配置
+    "vue.autoInsert.dotValue": true,
+    "vue.inlayHints.missingProps": true,
+    "vue.inlayHints.inlineHandlerLeading": true,
+    "vue.inlayHints.optionsWrapper": true,
+    "vue.updateImportsOnFileMove.enabled": true,
+    "vue.splitEditors.icon": true,
+    // 左侧不折叠的标签，其余标签会折叠
+    "vue.splitEditors.layout.left": [
+        "template",
+    ],
+    // 右侧不折叠的标签，其余标签会折叠
+    "vue.splitEditors.layout.right": [
+        "script",
+        "scriptSetup",
+    ],
+
+    // unplugin-vue-router
+    "typescript.preferences.autoImportFileExcludePatterns": [
+        "vue-router"
+    ],
+
+    "typescript.tsdk": "./node_modules/typescript/lib",
+}

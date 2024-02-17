@@ -1,0 +1,29 @@
+{
+    "recommendations": [
+        // git 管理
+        "eamodio.gitlens",
+        // 本地历史
+        "xyz.local-history",
+        // vscode 一键重载
+        "natqe.reload",
+        // svg 加强
+        "jock.svg",
+        // 图标美化
+        "PKief.material-icon-theme",
+        // 颜色显示
+        "naumovs.color-highlight",
+
+        // vue 加强
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin",
+        "wejectchan.vue3-snippets-for-vscode",
+        // 格式化
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "stylelint.vscode-stylelint",
+        // unocss 加强
+        "antfu.unocss",
+        "antfu.iconify",
+
+    ]
+}

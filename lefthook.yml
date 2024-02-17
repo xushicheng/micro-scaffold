@@ -1,0 +1,35 @@
+pre-commit:
+  parallel: true
+  commands:
+    tsc-noEmit:
+      run: tsc-noEmit
+    # stylelint:
+    #   glob: "*.{html,vue,css,scss}"
+    #   run: pnpm exec stylelint {staged_files} --cache
+    stylelint:fix:
+      glob: "*.{html,vue,css,scss}"
+      run: pnpm exec stylelint {staged_files} --cache --fix
+    # eslint:
+    #   glob: "{src,mock}/**/*.{js,ts,jsx,tsx,vue}"
+    #   run: pnpm exec eslint --cache --max-warnings 0 {staged_files}
+    eslint:fix:
+      glob: "{src,mock}/**/*.{js,ts,jsx,tsx,vue}"
+      run: pnpm exec eslint --cache --max-warnings 0 {staged_files} --fix
+
+lint:
+  parallel: true
+  commands:
+    tsc-noEmit:
+      run: tsc-noEmit
+    stylelint:
+      glob: "*.{html,vue,css,scss}"
+      run: pnpm exec stylelint {staged_files} --cache
+    # stylelint:fix:
+    #   glob: "*.{html,vue,css,scss}"
+    #   run: pnpm exec stylelint {staged_files} --cache --fix
+    eslint:
+      glob: "{src,mock}/**/*.{js,ts,jsx,tsx,vue}"
+      run: pnpm exec eslint --cache --max-warnings 0 {staged_files}
+    # eslint:fix:
+    #   glob: "{src,mock}/**/*.{js,ts,jsx,tsx,vue}"
+    #   run: pnpm exec eslint --cache --max-warnings 0 {staged_files} --fix
